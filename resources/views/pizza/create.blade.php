@@ -13,20 +13,27 @@
                     <ul>
                 </div>
             </div>
+
+            @if ($errors->any())
+            <div class="card mt-5">
+                <div class="card-body">
+                    <div class="alert alert-danger">  
+                        @foreach ($errors->all() as $error)
+                            <p> {{ $error }} </p>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            @endif
         </div>
+
+
 
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Pizza') }}</div>
-                <!-- validation  -->
-                @if ($errors->any())
-                    <div class="alert alert-danger">  
-                        @foreach ($errors->all() as $error)
-                           <p> {{ $error }} </p>
-                        @endforeach
-                    </div>
-                @endif
-                <form action="{{route('pizza.store')}}" method="POST">@csrf
+           
+                <form action="{{route('pizza.store')}}" method="POST" enctype="multipart/form-data">@csrf
                     <div class="card-body">
                         <div class="form-group mt-2">
                             <label for="name">Name of Pizza</label>
