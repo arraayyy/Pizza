@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
     <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">{{ __('Menu') }}</div>
+        <div class="card">
+            <div class="card-header">{{ __('Menu') }}</div>
                 <div class="card-body">
                     <ul class="list-group">
                         <a href="{{route('pizza.index')}}" class="list-group-item list-group-item-action">View</a>
@@ -26,8 +26,7 @@
             </div>
             @endif
         </div>
-
-
+    
 
         <div class="col-md-8">
             <div class="card">
