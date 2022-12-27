@@ -20,7 +20,7 @@
                 <div class="card-header">Edit Pizza</div>
            
                 <form action="{{route('pizza.update',$pizza->id)}}" method="POST" enctype="multipart/form-data">@csrf
-                    @method('PUT');
+                    @method('PUT')
                     <div class="card-body">
                         <div class="form-group mt-2">
                             <label for="name">Name of Pizza</label>
