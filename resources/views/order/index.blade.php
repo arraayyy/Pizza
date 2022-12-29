@@ -3,31 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-2 mt-5">
-            <div class="card">
-                <div class="card-header">
-                    {{ __('Menu') }}
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <a href="{{route('pizza.index')}}" class="list-group-item list-group-item-action">View</a>
-                        <a href="{{route('pizza.create')}}" class="list-group-item list-group-item-action">Create</a>
-                        <a href="{{route('user.order')}}" class="list-group-item list-group-item-action">User order</a>
-                    <ul>
-                </div>
-            </div>
-        </div>
+        <div class="col-md-12">
 
-        <div class="col-md-10">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Order</li>
+                <li class="breadcrumb-item active" aria-current="page">ORDERS</li>
             </ol>
         </nav>
-
-
+ 
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('Order') }}</div>
+                <div class="card-header">{{ __('Order') }}
+                    <a href="{{route('pizza.create')}}" style="float:right"><button class="btn btn-secondary btn-sm" style="margin-left: 5px;">Add Pizza</button></a>
+                    <a href="{{route('pizza.index')}}" style="float:right"><button class="btn btn-secondary btn-sm" style="margin-left: 5px;">View Pizza</button></a>
+                </div>
 
                 <div class="card-body">
                     <table class="table table-bordered">
